@@ -6,7 +6,7 @@ Pascal's Triangles:
 
 JavaScript code that creates two versions of these:
 
- 		    1
+ 		      1
  	       1 1
  	      1 2 1
  	     1 3 3 1
@@ -14,21 +14,23 @@ JavaScript code that creates two versions of these:
  	  1 5 10 10 5 1
 
 The first version recursively creates a triangle. 
-        function pascalRecursive(n, a) {
 
-          if (n < 1) return a;
+    function pascalRecursive(n, a) {
 
-          var prevTier = a[a.length-1];
-          var curTier = [1];
+      if (n < 1) return a;
 
-          for (var i = 1; i < prevTier.length; i++) {
-            curTier[i] = prevTier[i] + prevTier[i-1];
-          }
-          curTier.push(1);
-          a.push(curTier);
+      var prevTier = a[a.length-1];
+      var curTier = [1];
 
-          return pascalRecursive(n-1, a);
-        }
+      for (var i = 1; i < prevTier.length; i++) {
+        curTier[i] = prevTier[i] + prevTier[i-1];
+      }
+      curTier.push(1);
+      a.push(curTier);
+
+      return pascalRecursive(n-1, a);
+    }
+        
 The second version is much simpler. It starts with a seed set (see var tiers below), then builds each tier of the triangle using the previous tier. Boring, but human-readable and efficient (roughly 140x faster than the recursive version).
 
 		function pascalSimple(numTiers) {
