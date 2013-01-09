@@ -17,7 +17,7 @@ JavaScript code that creates two versions of these:
       1 4 6 4 1
     1 5 10 10 5 1
 
-The first version recursively creates a triangle. 
+The first version uses recursion to create the triangle. 
 
 ```javascript
 function pascalRecursive(n, a) {
