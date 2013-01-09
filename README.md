@@ -15,7 +15,8 @@ JavaScript code that creates two versions of these:
 
 The first version recursively creates a triangle. 
 
-```function pascalRecursive(n, a) {
+```javascript
+function pascalRecursive(n, a) {
 
   if (n < 1) return a;
 
@@ -29,7 +30,8 @@ The first version recursively creates a triangle.
   a.push(curTier);
 
   return pascalRecursive(n-1, a);
-}```
+}
+```
 
 The second version is much simpler. It starts with a seed set (see var tiers below), then builds each tier of the triangle using the previous tier. Boring, but human-readable and efficient (roughly 140x faster than the recursive version).
 
