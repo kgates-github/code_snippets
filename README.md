@@ -7,7 +7,7 @@ Pascal's Triangles:
     To run:
     > node src/PascalsTriangles.js <number-of-tiers>
 
-    JavaScript code that creates two versions of these:
+JavaScript code that creates two versions of these:
 
           1
          1 1
