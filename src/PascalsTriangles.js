@@ -35,12 +35,12 @@ if (process.argv[3] === 'false') {
 }
 
 if (numTiers < 2 || numTiers > 1999) {
-	console.log("Enter a value that is greater than 2 or less than 2000. Here are Pascal's triangles with five tiers:");
+	console.log("Enter a value that is greater than 2 or less than 2000. Here are Pascal's Triangles with five tiers:\n");
 	numTiers = 5;
 }
 
 if (numTiers > 50) {
-	console.log("For values with more than 50 tier, the triangle won't print.");
+	console.log("For values with more than 50 tiers, the triangle won't print. You can still se the execution times though:\n");
 	print = false;
 }
 

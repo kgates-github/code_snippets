@@ -29,8 +29,7 @@ exports.pascalRecursive = function(n, a) {
 
 /**
 *   Build each tier of the triangle using the previous tier. Needs a seed 
-*   set (var tiers below) to get started. Boring, but efficient and 
-*   human-readable.
+*   set (var tiers below) to get started. Boring, but human-readable.
 */
 
 exports.pascalSimple = function(numTiers) {

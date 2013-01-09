@@ -33,7 +33,7 @@ function pascalRecursive(n, a) {
 }
 ```
 
-The second version is much simpler. It starts with a seed set (see var tiers below), then builds each tier of the triangle using the previous tier. Boring, but human-readable and efficient.
+The second version is much simpler. It starts with a seed set (see var tiers below), then builds each tier of the triangle using the previous tier. Boring, but human-readable.
 
 ```javascript
 function pascalSimple(numTiers) {
