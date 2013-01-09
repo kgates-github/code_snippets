@@ -4,7 +4,8 @@ Code Snippets
 Pascal's Triangles:
 ---------------------------
 
-    To run:
+To run:
+
     > node src/PascalsTriangles.js <number-of-tiers>
 
 JavaScript code that creates two versions of these:
