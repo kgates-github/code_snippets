@@ -4,6 +4,9 @@ Code Snippets
 Pascal's Triangles:
 ---------------------------
 
+  To run:
+  > node src/PascalsTriangles.js <number-of-tiers>
+
 JavaScript code that creates two versions of these:
 
           1
@@ -58,6 +61,3 @@ function pascalSimple(numTiers) {
 ```
 
 More info on the triangles can be found here: http://en.wikipedia.org/wiki/Pascal's_triangle
-
-	To run:
-	> node src/PascalsTriangles.js <number-of-tiers>
