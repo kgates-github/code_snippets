@@ -19,7 +19,8 @@ var pascal = require('./Pascal.js'),
 		triangle,
 		start,
 		stop,
-		executionTime;
+		executionTime,
+		print;
 
 if (process.argv[2] && parseInt(process.argv[2]) % 1 === 0) {
 	numTiers = parseInt(process.argv[2]);
@@ -27,21 +28,34 @@ if (process.argv[2] && parseInt(process.argv[2]) % 1 === 0) {
 	numTiers = 5;
 }
 
-if (numTiers > 50 && numTiers > 2) {
-	console.log("Enter a value that is greater than 2 and less than 50. Here are Pascal's triangles with five tiers:");
+if (process.argv[3] === 'false') {
+	print = false;
+} else {
+	print = true;
+}
+
+if (numTiers < 2 || numTiers > 1999) {
+	console.log("Enter a value that is greater than 2 or less than 2000. Here are Pascal's triangles with five tiers:");
 	numTiers = 5;
+}
+
+if (numTiers > 50) {
+	console.log("For values with more than 50 tier, the triangle won't print.");
+	print = false;
 }
 
 start = new Date().getMilliseconds();
 triangle = pascal.pascalRecursive(numTiers-2, [[1],[1,1]]);
 stop = new Date().getMilliseconds();
 executionTime = stop - start;
-pascal.prettyprint(triangle);
-console.log('Execution time: ' + executionTime);
+if (print) pascal.prettyprint(triangle);
+console.log('Execution time: ' + executionTime + '\n');
 
 start = new Date().getMilliseconds();
 triangle = pascal.pascalSimple(numTiers-1);
 stop = new Date().getMilliseconds();
 executionTime = stop - start;
-pascal.prettyprint(triangle);
-console.log('Execution time: ' + executionTime);
+if (print) pascal.prettyprint(triangle);
+console.log('Execution time: ' + executionTime + '\n');
+
+
