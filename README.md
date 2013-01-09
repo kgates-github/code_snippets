@@ -33,7 +33,7 @@ The first version recursively creates a triangle.
 
 1. In Ruby you can map like this:
 
-    ['a', 'b'].map { |x| x.uppercase }
+        ['a', 'b'].map { |x| x.uppercase }
 
 The second version is much simpler. It starts with a seed set (see var tiers below), then builds each tier of the triangle using the previous tier. Boring, but human-readable and efficient (roughly 140x faster than the recursive version).
 
