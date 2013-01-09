@@ -8,7 +8,7 @@ if (!exports) {
 }
 
 /**
-*	Recursively create triangle for each step to to create the current 
+*   Recursively create triangle for each step to to create the current 
 *   tier. Neat but not efficient.
 */
 
@@ -37,7 +37,7 @@ exports.pascalRecursive = function(numTiers) {
 }
 
 /**
-*	Build each tier of the triangle using the previous tier. Needs a seed 
+*   Build each tier of the triangle using the previous tier. Needs a seed 
 *   set (var tiers below) to get started. Boring, but efficient and 
 *   human-readable.
 */
