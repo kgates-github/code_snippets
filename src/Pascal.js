@@ -8,32 +8,23 @@ if (!exports) {
 }
 
 /**
-*   Recursively create triangle for each step to to create the current 
-*   tier. Neat but not efficient.
+*   Recursively create triangle.
 */
 
-exports.getTier = function(n, a) {
+exports.pascalRecursive = function(n, a) {
 
 	if (n < 1) return a;
-	if (a.length === 1) return exports.getTier(n-1, [1,1]);
 
-	var tier = [1];
-	for (var i=1; i < a.length; i++) {
-		tier[i] = a[i] + a[i-1];
+	var prevTier = a[a.length-1];
+	var curTier = [1];
+
+	for (var i=1; i < prevTier.length; i++) {
+		curTier[i] = prevTier[i] + prevTier[i-1];
 	}
-	tier.push(1);
+	curTier.push(1);
+	a.push(curTier);
 
-	return exports.getTier(n-1, tier);
-}
-
-exports.pascalRecursive = function(numTiers) {
-
-	var tiers = [];
-	for (var j = 0; j < numTiers; j++) {
-		tiers[j] = exports.getTier(j, [1]);
-	}
-
-	return tiers;
+	return exports.pascalRecursive(n-1, a);
 }
 
 /**
@@ -50,7 +41,7 @@ exports.pascalSimple = function(numTiers) {
 	],
 	tier;
 
-	for (var j = 1; j < numTiers-1; j++) {
+	for (var j = 1; j < numTiers; j++) {
 		tier = [1];
 		for (var k = 1; k < tiers[j].length; k++) {
 			tier[k] = tiers[j][k] + tiers[j][k-1];

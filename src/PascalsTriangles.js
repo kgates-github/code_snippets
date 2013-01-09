@@ -29,8 +29,8 @@ if (numTiers > 50 && numTiers > 2) {
 	numTiers = 5;
 }
 
-triangle = pascal.pascalRecursive(numTiers);
+triangle = pascal.pascalRecursive(numTiers-2, [[1],[1,1]]);
 pascal.prettyprint(triangle);
 
-triangle = pascal.pascalSimple(numTiers);
+triangle = pascal.pascalSimple(numTiers-1);
 pascal.prettyprint(triangle);
