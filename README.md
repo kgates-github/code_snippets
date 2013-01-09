@@ -22,13 +22,13 @@ The first version recursively creates a triangle.
 		var prevTier = a[a.length-1];
 		var curTier = [1];
 
-		for (var i=1; i < prevTier.length; i++) {
+		for (var i = 1; i < prevTier.length; i++) {
 			curTier[i] = prevTier[i] + prevTier[i-1];
 		}
 		curTier.push(1);
 		a.push(curTier);
 
-		return exports.pascalRecursive(n-1, a);
+		return pascalRecursive(n-1, a);
 	}
 
 

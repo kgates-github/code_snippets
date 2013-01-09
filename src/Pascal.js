@@ -18,7 +18,7 @@ exports.pascalRecursive = function(n, a) {
 	var prevTier = a[a.length-1];
 	var curTier = [1];
 
-	for (var i=1; i < prevTier.length; i++) {
+	for (var i = 1; i < prevTier.length; i++) {
 		curTier[i] = prevTier[i] + prevTier[i-1];
 	}
 	curTier.push(1);
