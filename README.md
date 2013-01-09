@@ -38,7 +38,7 @@ The second version starts with a seed set (see var tiers below), then builds eac
 ```javascript
 function pascalSimple(numTiers) {
 
-	var tiers = [
+	var triangle = [
 			[1],
 			[1,1]
 		],
@@ -46,11 +46,11 @@ function pascalSimple(numTiers) {
 
 	for (var j = 1; j < numTiers-1; j++) {
 		tier = [1];
-		for (var k = 1; k < tiers[j].length; k++) {
-			tier[k] = tiers[j][k] + tiers[j][k-1];
+		for (var k = 1; k < triangle[j].length; k++) {
+			tier[k] = triangle[j][k] + triangle[j][k-1];
 		}
 		tier.push(1);
-		tiers.push(tier);
+		triangle.push(tier);
 	}
 
 	return tiers;

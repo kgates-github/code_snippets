@@ -34,7 +34,7 @@ exports.pascalRecursive = function(n, a) {
 
 exports.pascalSimple = function(numTiers) {
 
-	var tiers = [
+	var triangle = [
 		[1],
 		[1,1]
 	],
@@ -42,14 +42,14 @@ exports.pascalSimple = function(numTiers) {
 
 	for (var j = 1; j < numTiers; j++) {
 		tier = [1];
-		for (var k = 1; k < tiers[j].length; k++) {
-			tier[k] = tiers[j][k] + tiers[j][k-1];
+		for (var k = 1; k < triangle[j].length; k++) {
+			tier[k] = triangle[j][k] + triangle[j][k-1];
 		}
 		tier.push(1);
-		tiers.push(tier);
+		triangle.push(tier);
 	}
 
-	return tiers;
+	return triangle;
 }
 
 /**
