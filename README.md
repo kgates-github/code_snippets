@@ -35,25 +35,27 @@ function pascalRecursive(n, a) {
 
 The second version is much simpler. It starts with a seed set (see var tiers below), then builds each tier of the triangle using the previous tier. Boring, but human-readable and efficient (roughly 140x faster than the recursive version).
 
-		function pascalSimple(numTiers) {
+```javascript
+function pascalSimple(numTiers) {
 
-			var tiers = [
-					[1],
-					[1,1]
-				],
-				tier;
+	var tiers = [
+			[1],
+			[1,1]
+		],
+		tier;
 
-			for (var j = 1; j < numTiers-1; j++) {
-				tier = [1];
-				for (var k = 1; k < tiers[j].length; k++) {
-					tier[k] = tiers[j][k] + tiers[j][k-1];
-				}
-				tier.push(1);
-				tiers.push(tier);
-			}
-
-			return tiers;
+	for (var j = 1; j < numTiers-1; j++) {
+		tier = [1];
+		for (var k = 1; k < tiers[j].length; k++) {
+			tier[k] = tiers[j][k] + tiers[j][k-1];
 		}
+		tier.push(1);
+		tiers.push(tier);
+	}
+
+	return tiers;
+}
+```
 
 More info on the triangles can be found here: http://en.wikipedia.org/wiki/Pascal's_triangle
 
