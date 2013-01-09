@@ -15,10 +15,10 @@ JavaScript code that creates two versions of these:
 
 The first version recursively creates a triangle for each step to to create the current tier. This version is interesting, but not efficient. 
 
-	exports.getTier = function(n, a) {
+	funtion getTier(n, a) {
 
 		if (n < 1) return a;
-		if (a.length === 1) return exports.getTier(n-1, [1,1]);
+		if (a.length === 1) return getTier(n-1, [1,1]);
 
 		var tier = [1];
 		for (var i=1; i < a.length; i++) {
@@ -26,10 +26,10 @@ The first version recursively creates a triangle for each step to to create the 
 		}
 		tier.push(1);
 
-		return exports.getTier(n-1, tier);
+		return getTier(n-1, tier);
 	}
 
-	exports.pascalRecursive = function(numTiers) {
+	function pascalRecursive(numTiers) {
 
 		var tiers = [];
 		for (var j = 0; j < numTiers; j++) {
@@ -43,13 +43,13 @@ The first version recursively creates a triangle for each step to to create the 
 
 The second version is much simpler. It builds each tier of the triangle using the previous tier. Needs a seed set to get started (see var tiers below). Boring, but efficient and human-readable.
 
-	exports.pascalSimple = function(numTiers) {
+	function pascalSimple(numTiers) {
 
 		var tiers = [
-			[1],
-			[1,1]
-		],
-		tier;
+				[1],
+				[1,1]
+			],
+			tier;
 
 		for (var j = 1; j < numTiers-1; j++) {
 			tier = [1];
