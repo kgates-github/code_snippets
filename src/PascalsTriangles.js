@@ -1,7 +1,7 @@
 /**
 *	Make some of these:
 *
-*		    1
+*		      1
 *	       1 1
 *	      1 2 1
 *	     1 3 3 1
@@ -15,8 +15,11 @@
 */
 
 var pascal = require('./Pascal.js'),
-	numTiers,
-	triangle;
+		numTiers,
+		triangle,
+		start,
+		stop,
+		executionTime;
 
 if (process.argv[2] && parseInt(process.argv[2]) % 1 === 0) {
 	numTiers = parseInt(process.argv[2]);
@@ -29,8 +32,16 @@ if (numTiers > 50 && numTiers > 2) {
 	numTiers = 5;
 }
 
+start = new Date().getMilliseconds();
 triangle = pascal.pascalRecursive(numTiers-2, [[1],[1,1]]);
+stop = new Date().getMilliseconds();
+executionTime = stop - start;
 pascal.prettyprint(triangle);
+console.log('Execution time: ' + executionTime);
 
+start = new Date().getMilliseconds();
 triangle = pascal.pascalSimple(numTiers-1);
+stop = new Date().getMilliseconds();
+executionTime = stop - start;
 pascal.prettyprint(triangle);
+console.log('Execution time: ' + executionTime);
