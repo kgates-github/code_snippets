@@ -16,4 +16,4 @@ JavaScript code that creates two versions of these:
 More info on the triangles can be found here: http://en.wikipedia.org/wiki/Pascal's_triangle
 
 	To run:
-	> node pascal.js <number-of-tiers>
+	> node src/PascalsTriangles.js <number-of-tiers>
