@@ -2,6 +2,7 @@ Code Snippets
 ===========================
 
 Pascal's Triangles:
+---------------------------
 
 JavaScript code that creates two versions of these:
 
