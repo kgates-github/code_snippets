@@ -14,7 +14,6 @@ JavaScript code that creates two versions of these:
  	  1 5 10 10 5 1
 
 The first version recursively creates a triangle. 
-
         function pascalRecursive(n, a) {
 
           if (n < 1) return a;
@@ -30,11 +29,6 @@ The first version recursively creates a triangle.
 
           return pascalRecursive(n-1, a);
         }
-
-1. In Ruby you can map like this:
-
-        ['a', 'b'].map { |x| x.uppercase }
-
 The second version is much simpler. It starts with a seed set (see var tiers below), then builds each tier of the triangle using the previous tier. Boring, but human-readable and efficient (roughly 140x faster than the recursive version).
 
 		function pascalSimple(numTiers) {
