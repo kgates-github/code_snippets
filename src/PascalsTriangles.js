@@ -40,7 +40,7 @@ if (numTiers < 2 || numTiers > 1999) {
 }
 
 if (numTiers > 50) {
-	console.log("For values with more than 50 tiers, the triangle won't print. You can still se the execution times though:\n");
+	console.log("For values with more than 50 tiers, the triangle won't print. You can still see the execution times:\n");
 	print = false;
 }
 
