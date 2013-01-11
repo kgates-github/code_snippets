@@ -13,7 +13,7 @@ if (!exports) {
 
 exports.pascalRecursive = function(n, a) {
 
-	if (n < 1) return a;
+	if (n === 2) return a; // We already have the top two rows
 
 	var prevTier = a[a.length-1];
 	var curTier = [1];
@@ -40,7 +40,7 @@ exports.pascalSimple = function(numTiers) {
 	],
 	tier;
 
-	for (var j = 1; j < numTiers; j++) {
+	for (var j = 1; j < numTiers-1; j++) {
 		tier = [1];
 		for (var k = 1; k < triangle[j].length; k++) {
 			tier[k] = triangle[j][k] + triangle[j][k-1];
@@ -60,9 +60,10 @@ exports.pascalSimple = function(numTiers) {
 exports.prettyprint = function(tiers) {
 
 	var base = tiers.length,
-		center = Math.ceil(base/2),
-		output = '', 
-		offset, half;
+			center = Math.ceil(base/2),
+			output = '', 
+			offset, 
+			half;
 
 	for (var i = 0; i < base; i++) {
 		half = Math.floor(tiers[i].length/2);
@@ -75,7 +76,6 @@ exports.prettyprint = function(tiers) {
 
 	console.log(output);
 }
-
 
 
 

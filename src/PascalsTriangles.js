@@ -34,25 +34,25 @@ if (process.argv[3] === 'false') {
 	print = true;
 }
 
-if (numTiers < 2 || numTiers > 1999) {
-	console.log("Enter a value that is greater than 2 or less than 2000. Here are Pascal's Triangles with five tiers:\n");
+if (numTiers < 2 || numTiers > 1501) {
+	console.log("\n*** ALERT ***\nEnter a value between 2 and 1500. Here are Pascal's Triangles with five tiers:\n");
 	numTiers = 5;
 }
 
 if (numTiers > 50) {
-	console.log("For values with more than 50 tiers, the triangle won't print. You can still see the execution times:\n");
+	console.log("\n*** ALERT ***\nFor values with more than 50 tiers, the triangle won't print. You can still see the execution times:\n");
 	print = false;
 }
 
 start = new Date().getMilliseconds();
-triangle = pascal.pascalRecursive(numTiers-2, [[1],[1,1]]);
+triangle = pascal.pascalRecursive(numTiers, [[1],[1,1]]);
 stop = new Date().getMilliseconds();
 executionTime = stop - start;
 if (print) pascal.prettyprint(triangle);
 console.log('Execution time: ' + executionTime + '\n');
 
 start = new Date().getMilliseconds();
-triangle = pascal.pascalSimple(numTiers-1);
+triangle = pascal.pascalSimple(numTiers);
 stop = new Date().getMilliseconds();
 executionTime = stop - start;
 if (print) pascal.prettyprint(triangle);
