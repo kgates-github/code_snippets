@@ -5,8 +5,7 @@ Pascal's Triangles:
 ---------------------------
 
 Requires node.js:
-
-    http://nodejs.org/download/
+http://nodejs.org/download/
 
 To run:
 
