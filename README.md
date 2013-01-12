@@ -4,6 +4,10 @@ Code Snippets
 Pascal's Triangles:
 ---------------------------
 
+Requires node.js
+
+  http://nodejs.org/download/
+
 To run:
 
     > node src/PascalsTriangles.js <number-of-tiers>
