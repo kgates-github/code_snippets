@@ -4,13 +4,6 @@ Code Snippets
 Pascal's Triangles:
 ---------------------------
 
-Requires node.js:
-http://nodejs.org/download/
-
-To run:
-
-    > node src/PascalsTriangles.js <number-of-tiers>
-
 JavaScript code that creates two versions of these:
 
           1
@@ -19,6 +12,13 @@ JavaScript code that creates two versions of these:
        1 3 3 1
       1 4 6 4 1
     1 5 10 10 5 1
+
+Requires node.js:
+http://nodejs.org/download/
+
+To run:
+
+    > node src/PascalsTriangles.js <number-of-tiers>
 
 The first version uses recursion to create the triangle. 
 
