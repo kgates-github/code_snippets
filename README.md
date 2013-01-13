@@ -25,7 +25,7 @@ The first version uses recursion to create the triangle.
 ```javascript
 function pascalRecursive(n, a) {
 
-  if (n < 1) return a;
+  if (n === 2) return a; // We already have the top two rows
 
   var prevTier = a[a.length-1];
   var curTier = [1];
