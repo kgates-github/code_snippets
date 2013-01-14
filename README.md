@@ -25,7 +25,7 @@ The first version uses recursion to create the triangle.
 ```javascript
 function pascalRecursive(n, a) {
 
-  if (n === 2) return a; // We already have the top two rows
+  if (n < 2) return a; // We already have the top row
 
   var prevTier = a[a.length-1];
   var curTier = [1];
@@ -46,21 +46,20 @@ The second version starts with a seed set, then builds each tier of the triangle
 function pascalSimple(numTiers) {
 
 	var triangle = [
-			[1],
-			[1,1]
-		],
-		tier;
+    [1]
+  ],
+  tier;
 
-	for (var j = 1; j < numTiers-1; j++) {
-		tier = [1];
-		for (var k = 1; k < triangle[j].length; k++) {
-			tier[k] = triangle[j][k] + triangle[j][k-1];
-		}
-		tier.push(1);
-		triangle.push(tier);
-	}
+  for (var j = 0; j < numTiers-1; j++) {
+    tier = [1];
+    for (var k = 1; k < triangle[j].length; k++) {
+      tier[k] = triangle[j][k] + triangle[j][k-1];
+    }
+    tier.push(1);
+    triangle.push(tier);
+  }
 
-	return tiers;
+  return triangle;
 }
 ```
 

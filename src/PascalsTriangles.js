@@ -1,5 +1,5 @@
 /**
-*	Make some of these:
+*	 Make some of these:
 *
 *		      1
 *	       1 1
@@ -8,7 +8,7 @@
 *	    1 4 6 4 1
 *	  1 5 10 10 5 1
 *
-*	http://en.wikipedia.org/wiki/Pascal's_triangle
+*	 http://en.wikipedia.org/wiki/Pascal's_triangle
 *
 *   To run:
 *   > node pascal.js <number-of-tiers>
@@ -45,7 +45,7 @@ if (numTiers > 50) {
 }
 
 start = new Date().getMilliseconds();
-triangle = pascal.pascalRecursive(numTiers, [[1],[1,1]]);
+triangle = pascal.pascalRecursive(numTiers, [[1]]);
 stop = new Date().getMilliseconds();
 executionTime = stop - start;
 if (print) pascal.prettyprint(triangle);
