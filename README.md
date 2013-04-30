@@ -23,7 +23,6 @@ This is some code to check out Jasmine, the testing framework for JavaScript.  T
 Requires node.js:
 http://nodejs.org/download/
 
-To run:
 
-    > node src/PascalsTriangles.js <number-of-tiers>
+  node src/PascalsTriangles.js
 
