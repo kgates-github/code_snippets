@@ -1,7 +1,7 @@
 Code Snippets
 ===========================
 
-OFA Data Validation Code:
+SQL: OFA Data Validation Code:
 ---------------------------
 
 SQL for Vertica used to validate data from the 12 Nevada county clerks offices for the Obama campaign. This code created a report for the Nevada leadership each morning for the last four weeks for the last three weeks of the campaign.
@@ -9,7 +9,7 @@ SQL for Vertica used to validate data from the 12 Nevada county clerks offices f
   src/nv_county_clerks_snapshots.sql
 
 
-Pascal's Triangles:
+JavaScript: Pascal's Triangles:
 ---------------------------
 
 This is some code to check out Jasmine, the testing framework for JavaScript.  The code creates two versions of Pascal's Triangles:
