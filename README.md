@@ -4,7 +4,7 @@ Code Snippets
 Pascal's Triangles:
 ---------------------------
 
-This is some code to check out Jasmine, the testing frameowrk for JavaScript.  The code creates two versions of Pascal's Triangles:
+This is some code to check out Jasmine, the testing framework for JavaScript.  The code creates two versions of Pascal's Triangles:
 
           1
          1 1
