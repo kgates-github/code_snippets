@@ -4,7 +4,7 @@ Code Snippets
 Pascal's Triangles:
 ---------------------------
 
-JavaScript code that creates two versions of these:
+This is some code to check out Jasmine, the testing frameowrk for JavaScript.  The code creates two versions of Pascal's Triangles:
 
           1
          1 1
@@ -66,4 +66,7 @@ function pascalSimple(numTiers) {
 var triangle = pascalRecursive(numTiers);
 ```
 
-More info on the triangles can be found here: http://en.wikipedia.org/wiki/Pascal's_triangle
+County Clerk Data Validation:
+---------------------------
+
+
