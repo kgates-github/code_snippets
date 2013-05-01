@@ -28,7 +28,7 @@ http://nodejs.org/download/
     src/PascalsTriangles.js
 
 
-JavaScript: Code for the Obama Campaign's www.barackobama.com/local:
+JavaScript: Code for the Obama Campaign:
 ---------------------------
 
 I wrote about 40-50% of this. We had to make a lot of changes at the last second to please campaign headquarters. It's not the prettiest code I've seen, but it got through a rigorous testing program, and we shipped 4 weeks before the election.  
