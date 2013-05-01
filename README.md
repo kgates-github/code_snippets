@@ -4,7 +4,7 @@ Code Snippets
 SQL: OFA Data Validation Code:
 ---------------------------
 
-SQL for Vertica used to validate data from the 12 Nevada county clerks offices for the Obama campaign. This code created a report for the Nevada leadership each morning for the last four weeks for the last three weeks of the campaign.
+SQL for Vertica used to validate data from the 12 Nevada county clerks offices for the Obama campaign. 
 
 
     src/nv_county_clerks_snapshots.sql
