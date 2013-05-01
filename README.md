@@ -13,7 +13,7 @@ SQL for Vertica used to validate data from the 12 Nevada county clerks offices f
 JavaScript: Pascal's Triangles:
 ---------------------------
 
-This is some code i wrote to check out Jasmine, the testing framework for JavaScript.  The code creates two versions of Pascal's Triangles:
+This is some code I wrote to check out Jasmine, the testing framework for JavaScript.  The code creates two versions of Pascal's Triangles:
 
           1
          1 1
